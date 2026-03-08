@@ -6,3 +6,6 @@ export const loans = [
   { month: "Sep", amount: 10000 },
   { month: "Nov", amount: 12000 },
 ];
+
+
+

@@ -9,6 +9,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
   const { t } = useTranslation();
+  
 
   const navItems = [
     "home",
@@ -40,7 +41,7 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-500 ${scrolled
           ? "h-[75px] bg-white/70 backdrop-blur-xl shadow-xl border-b border-white/20"
-          : "h-[100px] bg-gradient-to-r from-emerald-600 via-green-500 to-emerald-600"
+          : "h-[100px] "
           }`}
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 h-full flex justify-between items-center">

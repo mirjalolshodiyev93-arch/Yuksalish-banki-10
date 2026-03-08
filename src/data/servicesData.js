@@ -1,4 +1,5 @@
 import { CreditCard, Landmark, PiggyBank, RefreshCcw } from "lucide-react";
+import { defaultFunnelProps } from "recharts/types/cartesian/Funnel";
 
 export const services = [
   {
@@ -15,6 +16,8 @@ export const services = [
     icon: Landmark,
     color: "green",
     active: true
+
+  
   },
   {
     id: 3,
