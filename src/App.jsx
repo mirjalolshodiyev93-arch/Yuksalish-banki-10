@@ -29,10 +29,12 @@ import ErrorBoundary from "./context/ErrorBoundary";
 import Transfer from "./pages/Transfer";
 import AboutUs from "./components/components/AboutUs";
       import CardSection from "./components/components/CardSection";
-import CurrencyExchangePage from "./components/components/CurrencyExchangePage";
+
 import Contacts from "./components/components/Contactkar";
 import Deposits from "./components/components/Deposits";
 import OpenAccount from "./components/components/OpenAccount";
+import CardMap from "./components/CardMap";
+
 
 function App() {
   const location = useLocation();
@@ -52,8 +54,9 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/hisob-ochish" element={<OpenAccount />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/salom" element={<CurrencyExchangePage />} />
+       
           <Route path="/salom/usd" element={<USDPage />} />
+           <Route path="/map" element={<CardMap />} />
           <Route path="/salom/eur" element={<EURPage />} />
           <Route path="/salom/gbp" element={<GBPPage />} />
           <Route path="/salom/rub" element={<RUBPage />} />

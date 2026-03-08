@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Target, Rocket, PhoneCall, ArrowRight } from "lucide-react";
+import { Target, Rocket, PhoneCall, ArrowRight,  } from "lucide-react";
 import bankImage from "../../assets/biz haqimizda.png";
 import { useTranslation } from "react-i18next";
-
+import { Link } from "react-router-dom"
 export default function AboutUs() {
   const { t } = useTranslation();
 
@@ -21,7 +21,7 @@ export default function AboutUs() {
   ];
 
   const teamMembers = [
-    { name: "Jahon Bank", role: t("about.team.roles.founder"), img: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { name: "Jahon ", role: t("about.team.roles.founder"), img: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=900" },
     { name: "Olimbek X.", role: t("about.team.roles.ceo"), img: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600" },
     { name: "Dilshod R.", role: t("about.team.roles.cfo"), img: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=600" }
   ];
@@ -127,10 +127,14 @@ export default function AboutUs() {
           <div className="relative z-10">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">{t("about.cta.title")}</h2>
             <p className="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto">{t("about.cta.desc")}</p>
-            <button className="inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-xl">
-              <PhoneCall size={22} />
-              {t("about.cta.btn")}
-            </button>
+          
+          <Link to="/contact">
+  <button className="inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-xl">
+    <PhoneCall size={22} />
+    {t("about.cta.btn")}
+  </button>
+</Link>
+         
           </div>
         </motion.div>
       </div>

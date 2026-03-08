@@ -65,7 +65,7 @@ export default function Footer() {
                 <Link to="/tariflar">Tariflar</Link>
               </li>
               <li className="hover:text-green-400 cursor-pointer">
-                <Link to="/filiallar">Filiallar va bankomatlar</Link>
+                <Link to="/map">Filiallar va bankomatlar</Link>
               </li>
               <li className="hover:text-green-400 cursor-pointer">
                 <Link to="/savol-v-javoblar">Savol va javoblar</Link>

@@ -33,14 +33,14 @@ export default function Contacts() {
   };
 
   return (
-    <div className="pt-[100px] sm:pt-[140px] bg-white min-h-screen py-12 px-4 sm:px-6 lg:px-16">
+    <div className="pt-[100px] sm:pt-[140px] bg-green-50 min-h-screen py-12 px-4 sm:px-6 lg:px-16">
       <div className="max-w-6xl mx-auto">
-        {/* Title qismi o'zgarishsiz */}
+        {/* Title qismi */}
         <div className="text-center mb-10 sm:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900">
             {t("contacts.title")}
           </h1>
-          <div className="w-20 h-1.5 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+          <div className="w-20 h-1.5 bg-green-600 mx-auto mt-4 rounded-full"></div>
           <p className="text-gray-600 mt-4 text-base sm:text-lg max-w-2xl mx-auto">
             {t("contacts.subtitle")}
           </p>
@@ -48,11 +48,11 @@ export default function Contacts() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           
-          {/* Contact Info qismi o'zgarishsiz */}
-          <div className="bg-gray-50 p-6 sm:p-10 rounded-3xl shadow-sm border border-gray-100 space-y-8">
+          {/* Contact Info */}
+          <div className="bg-green-50 p-6 sm:p-10 rounded-3xl shadow-sm border border-green-100 space-y-8">
             <div className="flex items-start gap-4">
-              <div className="p-3 bg-blue-100 rounded-xl">
-                <Phone className="text-blue-600 w-6 h-6" />
+              <div className="p-3 bg-green-100 rounded-xl">
+                <Phone className="text-green-600 w-6 h-6" />
               </div>
               <div>
                 <h3 className="font-bold text-lg text-gray-800">{t("contacts.phone")}</h3>
@@ -61,8 +61,8 @@ export default function Contacts() {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="p-3 bg-blue-100 rounded-xl">
-                <Mail className="text-blue-600 w-6 h-6" />
+              <div className="p-3 bg-green-100 rounded-xl">
+                <Mail className="text-green-600 w-6 h-6" />
               </div>
               <div>
                 <h3 className="font-bold text-lg text-gray-800">{t("contacts.email")}</h3>
@@ -71,8 +71,8 @@ export default function Contacts() {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="p-3 bg-blue-100 rounded-xl">
-                <MapPin className="text-blue-600 w-6 h-6" />
+              <div className="p-3 bg-green-100 rounded-xl">
+                <MapPin className="text-green-600 w-6 h-6" />
               </div>
               <div>
                 <h3 className="font-bold text-lg text-gray-800">{t("contacts.address")}</h3>
@@ -81,8 +81,8 @@ export default function Contacts() {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="p-3 bg-blue-100 rounded-xl">
-                <Clock className="text-blue-600 w-6 h-6" />
+              <div className="p-3 bg-green-100 rounded-xl">
+                <Clock className="text-green-600 w-6 h-6" />
               </div>
               <div>
                 <h3 className="font-bold text-lg text-gray-800">{t("contacts.work_hours")}</h3>
@@ -91,8 +91,8 @@ export default function Contacts() {
             </div>
           </div>
 
-          {/* Contact Form - Faqat kerakli atributlar qo'shildi */}
-          <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl border border-gray-50">
+          {/* Contact Form */}
+          <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl border border-green-50">
             <h2 className="text-2xl font-bold mb-6 text-gray-800">{t("contacts.form_title")}</h2>
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
@@ -103,7 +103,7 @@ export default function Contacts() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder={t("contacts.name_placeholder")}
-                  className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all"
+                  className="w-full p-3 bg-green-50 border border-green-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:bg-white outline-none transition-all"
                 />
               </div>
               <div>
@@ -114,7 +114,7 @@ export default function Contacts() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder={t("contacts.email_placeholder")}
-                  className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all"
+                  className="w-full p-3 bg-green-50 border border-green-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:bg-white outline-none transition-all"
                 />
               </div>
               <div>
@@ -125,12 +125,12 @@ export default function Contacts() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder={t("contacts.message_placeholder")}
-                  className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all"
+                  className="w-full p-3 bg-green-50 border border-green-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:bg-white outline-none transition-all"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 active:scale-[0.98] transition-all shadow-lg shadow-blue-200"
+                className="w-full bg-green-600 text-white py-4 rounded-xl font-bold hover:bg-green-700 active:scale-[0.98] transition-all shadow-lg shadow-green-200"
               >
                 {t("contacts.send_btn")}
               </button>
