@@ -2,9 +2,8 @@
 import ServiceCard from "../components/_compoint_/ServiceCard";
 import Bank from "../components/skroll/Bank";
 import Stats from "../components/_compoint_/Stats";
-import Testimonials from "./Testimonials";
-
-  import Hero from "../components/components/Hero";
+import Hero from "../components/components/Hero";
+import { Testimonials } from "./Testimonials";
 
 
 export default function Home() {
@@ -14,8 +13,7 @@ export default function Home() {
       <Stats />
       <Bank />
       <ServiceCard />
-      <Testimonials />
-
+      <Testimonials/>
     </>
   );
 }

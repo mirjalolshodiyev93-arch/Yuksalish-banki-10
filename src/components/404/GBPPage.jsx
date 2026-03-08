@@ -12,6 +12,7 @@ const chartData = [
   { day: 'Yak', rate: 16520 },
 ];
 
+
 export default function GBPPage() {
   const [amount, setAmount] = useState(1);
   const buyRate = 16200;

@@ -11,6 +11,7 @@ const chartData = [
   { day: 'Jum', rate: 14010 },
   { day: 'Shan', rate: 13980 },
   { day: 'Yak', rate: 14050 },
+
 ];
 
 export default function EURPage() {

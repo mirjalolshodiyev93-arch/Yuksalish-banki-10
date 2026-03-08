@@ -46,6 +46,7 @@ export default function Navbar() {
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 h-full flex justify-between items-center">
 
+
           {/* LOGO */}
           <Link to="/">
           <div
