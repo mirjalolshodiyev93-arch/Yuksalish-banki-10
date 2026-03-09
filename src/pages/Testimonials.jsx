@@ -1,35 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
-const initialTestimonials = [
-  {
-    name: "Ali Rustam",
-    role: "Kredit Foydalanuvchisi",
-    rating: 5,
-    message:
-      "Yuksalish Bankdagi xizmatlar juda qulay va tezkor. Men omonatni ochishdan juda mamnunman.",
-    img: "https://i.pravatar.cc/100?img=12",
-  },
-  {
-    name: "Malika Karimova",
-    role: "Kart Foydalanuvchisi",
-    rating: 4,
-    message:
-      "Online banking interfeysi juda sodda va tushunarli. Mijozlarga xizmat darajasi a’lo.",
-    img: "https://i.pravatar.cc/100?img=32",
-  },
-  {
-    name: "Jumaqulva J",
-    role: "Valyuta Savdogari",
-    rating: 5,
-    message:
-      "Valyuta kurslari yangilanadi va har doim qulay. Men doimo bu bank bilan ishlayman.",
-    img: "https://i.pravatar.cc/100?img=44",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export function Testimonials() {
-  const [testimonials, setTestimonials] = useState(initialTestimonials);
+  const { t, i18n } = useTranslation(); // ✅ i18n qo'shildi
+
+  // ✅ testimonials state
+  const [testimonials, setTestimonials] = useState([]);
+
+  // ✅ i18n arrayini olish
+  useEffect(() => {
+    const data = t("uz1", { returnObjects: true });
+    if (Array.isArray(data)) {
+      setTestimonials(data);
+    }
+  }, [t, i18n.language]); // til o'zgarganda array yangilanadi
 
   const [form, setForm] = useState({
     name: "",
@@ -40,12 +25,11 @@ export function Testimonials() {
     imgPreview: "",
   });
 
-  const [submitted, setSubmitted] = useState(false); // ✅ foydalanuvchi yuborganligini saqlash
+  const [submitted, setSubmitted] = useState(false);
 
-  // ⭐ rating statistikasi
   const averageRating =
     testimonials.reduce((sum, t) => sum + (t.rating || 0), 0) /
-    testimonials.length;
+    (testimonials.length || 1);
   const roundedRating = averageRating.toFixed(1);
 
   const fadeIn = {
@@ -68,7 +52,6 @@ export function Testimonials() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!form.name || !form.role || !form.message) return;
 
     const newTestimonial = {
@@ -80,21 +63,15 @@ export function Testimonials() {
     };
 
     setTestimonials([newTestimonial, ...testimonials]);
-    setSubmitted(true); // ✅ yuborilgandan keyin formani disable qilamiz
+    setSubmitted(true);
   };
 
   return (
     <section className="bg-gray-50 py-24 px-4 sm:px-10 lg:px-20">
       <motion.div {...fadeIn} className="text-center mb-12">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">
-          Mijozlarimiz Nima Deydi
-        </h2>
-        <p className="text-gray-600 max-w-xl mx-auto">
-          Bizning mijozlarimiz Yuksalish Bank bilan qanday muvaffaqiyatga
-          erishganini o‘qing va o‘z fikringizni qoldiring.
-        </p>
+        <h2 className="text-3xl md:text-5xl font-bold mb-4">{t("uz.title")}</h2>
+        <p className="text-gray-600 max-w-xl mx-auto">{t("uz.desc")}</p>
 
-        {/* ⭐ Rating statistikasi */}
         <div className="flex items-center justify-center gap-2 mt-4">
           <div className="text-yellow-400 text-xl">
             {"★".repeat(Math.round(averageRating))}
@@ -104,12 +81,11 @@ export function Testimonials() {
             {roundedRating} / 5
           </span>
           <span className="text-gray-500">
-            ({testimonials.length} ta fikr)
+            ({testimonials.length} {t("uz.stats")})
           </span>
         </div>
       </motion.div>
 
-      {/* FORM */}
       <motion.form
         {...fadeIn}
         onSubmit={handleSubmit}
@@ -117,22 +93,22 @@ export function Testimonials() {
       >
         <input
           type="text"
-          placeholder="Ismingiz"
+          placeholder={t("uz.form.name")}
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
           className="p-4 rounded-xl border"
-          disabled={submitted} // ✅ formani bloklash
+          disabled={submitted}
         />
         <input
           type="text"
-          placeholder="Rol"
+          placeholder={t("uz.form.role")}
           value={form.role}
           onChange={(e) => setForm({ ...form, role: e.target.value })}
           className="p-4 rounded-xl border"
           disabled={submitted}
         />
         <textarea
-          placeholder="Fikringiz..."
+          placeholder={t("uz.form.msg")}
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
           className="p-4 rounded-xl border"
@@ -140,7 +116,6 @@ export function Testimonials() {
           disabled={submitted}
         />
 
-        {/* ⭐ rating */}
         <div className="flex justify-center gap-2 text-2xl cursor-pointer">
           {[1, 2, 3, 4, 5].map((star) => (
             <span
@@ -167,19 +142,16 @@ export function Testimonials() {
           }`}
           disabled={submitted}
         >
-          Fikringizni yuboring
+          {t("uz.form.submit")}
         </button>
 
         {submitted && (
-          <p className="text-green-600 mt-2 text-center">
-            Sizning fikringiz yuborildi! Fikrni faqat bir marta yuborishingiz mumkin.
-          </p>
+          <p className="text-green-600 mt-2 text-center">{t("uz.form.success")}</p>
         )}
       </motion.form>
 
-      {/* TESTIMONIALS */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {testimonials.map((t, index) => (
+        {testimonials.map((item, index) => (
           <motion.div
             key={index}
             {...fadeIn}
@@ -187,18 +159,18 @@ export function Testimonials() {
             className="bg-white flex flex-col items-center p-6 rounded-2xl shadow-lg text-center"
           >
             <div className="w-20 h-20 mb-4 rounded-full overflow-hidden">
-              <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
+              <img src={item.img} alt={item.name} className="w-full h-full object-cover" />
             </div>
 
             <div className="text-yellow-400 text-lg mb-2">
-              {"★".repeat(t.rating || 0)}
-              {"☆".repeat(5 - (t.rating || 0))}
+              {"★".repeat(item.rating || 0)}
+              {"☆".repeat(5 - (item.rating || 0))}
             </div>
 
-            <p className="text-gray-700 mb-4 italic">“{t.message}”</p>
+            <p className="text-gray-700 mb-4 italic">“{item.message}”</p>
 
-            <h4 className="font-bold text-lg">{t.name}</h4>
-            <span className="text-blue-600 text-sm">{t.role}</span>
+            <h4 className="font-bold text-lg">{item.name}</h4>
+            <span className="text-blue-600 text-sm">{item.role}</span>
           </motion.div>
         ))}
       </div>

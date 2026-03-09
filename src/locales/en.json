@@ -42,13 +42,16 @@
     "experience": "Years Experience",
     "service": "Service"
   },
-  "hero": {
-    "badle":"The #1 Bank in Uzbekistan",
-    "desc": "Build your financial future with confidence with Lodo Bank.",
+ "hero": {
+    "badle": "No.1 digital bank in Uzbekistan",
+    "desc": "Build your financial future confidently with Lodo Bank.",
     "title": "Trust, Security,",
     "subtitle": "Growth",
-    "button": "Open Account",
-    "button1": "More"
+    "button": "Services",
+    "button1": "More Details",
+    "hero_title": "Confidence in the world of finance",
+    "hero_desc": "Your reliable bank and center of modern financial solutions",
+    "hero_subtitle": "New standards"
   },
   "services": {
     "title": "Our Services",
@@ -273,7 +276,42 @@
       "desc": "Our specialists are ready to assist you. Contact us now and take advantage of our services.",
       "btn": "Contact Us"
     }
-  }
+  },
+  "uz": {
+      "title": "What Our Clients Say",
+      "desc": "Read how our clients have achieved success with Yuksalish Bank and leave your feedback.",
+      "stats": "reviews",
+      "form": {
+        "name": "Your Name",
+        "role": "Your Role",
+        "msg": "Your Feedback...",
+        "submit": "Send Feedback",
+        "success": "Your feedback has been submitted! You can only send it once."
+      }
+    },
+    "uz1": [
+    {
+      "name": "Ali Rustam",
+      "role": "Credit User",
+      "rating": 5,
+      "message": "The services at Yuksalish Bank are very convenient and fast. I am very pleased with opening a deposit.",
+      "img": "https://i.pravatar.cc/100?img=12"
+    },
+    {
+      "name": "Malika Karimova",
+      "role": "Bank Card User",
+      "rating": 4,
+      "message": "The online banking interface is very simple and clear. Customer service is excellent.",
+      "img": "https://i.pravatar.cc/100?img=32"
+    },
+    {
+      "name": "Jumaqulva J",
+      "role": "Currency Trader",
+      "rating": 5,
+      "message": "Currency rates are updated and always convenient. I always work with this bank.",
+      "img": "https://i.pravatar.cc/100?img=44"
+    }
+  ]
 
 }
 

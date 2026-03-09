@@ -42,12 +42,15 @@
     "service": "Xizmat"
   },
   "hero": {
-    "badle":"O'zbekistonda №1 raqamli bank",
+    "badle": "O'zbekistonda №1 raqamli bank",
     "desc": "Lodo Bank bilan moliyaviy kelajagingizni ishonch bilan quring.",
     "title": "Ishonch, Xavfsizlik,",
     "subtitle": "Rivojlanish",
-    "button": "Xizmatlar",  
-    "button1": "Batafsil"
+    "button": "Xizmatlar",
+    "button1": "Batafsil",
+    "hero_title": "Moliya olamida ishonch bilan",
+    "hero_desc": "Sizning ishonchli bankingiz va zamonaviy moliyaviy yechimlar markazi",
+    "hero_subtitle": "Yangi standartlar"
   },
   "services": {
     "title": "Bizning xizmatlar",
@@ -293,5 +296,40 @@
       "desc": "Mutaxassislarimiz sizga yordam berishga tayyor. Hoziroq bog'laning va xizmatlarimizdan foydalaning.",
       "btn": "Bog'lanish"
     }
-  }
+  },
+  "uz": {
+    "title": "Mijozlarimiz Nima Deydi",
+    "desc": "Bizning mijozlarimiz Yuksalish Bank bilan qanday muvaffaqiyatga erishganini o'qing va o'z fikringizni qoldiring.",
+    "stats": "ta fikr",
+    "form": {
+      "name": "Ismingiz",
+      "role": "Rolingiz",
+      "msg": "Fikringiz...",
+      "submit": "Fikringizni yuboring",
+      "success": "Sizning fikringiz yuborildi! Fikrni faqat bir marta yuborishingiz mumkin."
+    }
+  },
+  "uz1": [
+    {
+      "name": "Ali Rustam",
+      "role": "Kredit Foydalanuvchisi",
+      "rating": 5,
+      "message": "Yuksalish Bankdagi xizmatlar juda qulay va tezkor. Men omonatni ochishdan juda mamnunman.",
+      "img": "https://i.pravatar.cc/100?img=12"
+    },
+    {
+      "name": "Malika Karimova",
+      "role": "Bank kartasi foydalanuvchisi",
+      "rating": 4,
+      "message": "Online banking interfeysi juda sodda va tushunarli. Mijozlarga xizmat darajasi a’lo.",
+      "img": "https://i.pravatar.cc/100?img=32"
+    },
+    {
+      "name": "Jumaqulva J",
+      "role": "Valyuta savdogari",
+      "rating": 5,
+      "message": "Valyuta kurslari yangilanadi va har doim qulay. Men doimo bu bank bilan ishlayman.",
+      "img": "https://i.pravatar.cc/100?img=44"
+    }
+  ]
 }

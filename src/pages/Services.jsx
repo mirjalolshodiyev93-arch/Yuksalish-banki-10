@@ -38,11 +38,11 @@ export default function Service() {
         <div className="absolute inset-0 bg-white/30"></div>
         <div className="relative px-16">
           <h1 className="text-5xl font-bold leading-tight mb-4 text-gray-900">
-            {t("hero_title", "Moliya olamida")} <br />
-            <span className="text-blue-600">{t("hero_subtitle", "yangi standartlar")}</span>
+            {t("hero.hero_title")} <br />
+            <span className="text-blue-600">{t("hero.hero_subtitle")}</span>
           </h1>
           <p className="text-black max-w-lg">
-            {t("hero_desc", "Sizning ishonchli bankingiz va zamonaviy moliyaviy yechimlar markazi")}
+            {t("hero.hero_desc",)}
           </p>
         </div>
       </div>
