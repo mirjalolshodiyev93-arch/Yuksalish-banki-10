@@ -331,5 +331,58 @@
       "message": "Valyuta kurslari yangilanadi va har doim qulay. Men doimo bu bank bilan ishlayman.",
       "img": "https://i.pravatar.cc/100?img=44"
     }
-  ]
+  ],
+ "loans": {
+    "jan": "Yan",
+    "mar": "Mar",
+    "may": "May",
+    "jul": "Iyl",
+    "sep": "Sen",
+    "nov": "Noy"
+  },
+   "loan": "Kredit o‘sish tendensiyalari",
+   "stats1": {
+    "clients": "Jami mijozlar",
+    "loans": "Faol kreditlar",
+    "deposits": "Jami omonatlar",
+    "revenue": "Oylik daromad"
+  },
+"transactions": {
+   "title": "So‘nggi Tranzaksiyalar",
+    "t1": {
+      "date": "24 Okt 2023",
+      "client": "Jahongir Saidov",
+      "type": "Agro krediti",
+      "amount": "45,000,000 UZS",
+      "status": "Bajarildi"
+    },
+    "t2": {
+      "date": "02 Noy 2023",
+      "client": "Dilshod Karimov",
+      "type": "Biznes krediti",
+      "amount": "120,000,000 UZS",
+      "status": "Kutilmoqda"
+    },
+    "t3": {
+      "date": "15 Dek 2023",
+      "client": "Malika Tursunova",
+      "type": "Ipoteka",
+      "amount": "350,000,000 UZS",
+      "status": "Bajarildi"
+    },
+    "t4": {
+      "date": "08 Yan 2024",
+      "client": "Azizbek Yuldashev",
+      "type": "Avto krediti",
+      "amount": "85,000,000 UZS",
+      "status": "Rad etildi"
+    }
+  },
+   "table": {
+    "date": "Sana",
+    "client": "Mijoz",
+    "type": "Turi",
+    "amount": "Miqdori",
+    "status": "Holati"
+  }
 }

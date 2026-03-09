@@ -332,5 +332,59 @@
       "message": "Курсы валют обновляются и всегда удобны. Я всегда работаю с этим банком.",
       "img": "https://i.pravatar.cc/100?img=44"
     }
-  ]
+  ],
+    "loans": {
+    "jan": "Янв",
+    "mar": "Мар",
+    "may": "Май",
+    "jul": "Июл",
+    "sep": "Сен",
+    "nov": "Ноя"
+  },
+  "stats1": {
+    "clients": "Всего клиентов",
+    "loans": "Активные кредиты",
+    "deposits": "Общий объем вкладов",
+    "revenue": "Ежемесячный доход"
+  },
+ 
+  "loan": "Тенденции роста кредитов",
+  "transactions": {
+      "title": "Последние транзакции",
+    "t1": {
+      "date": "24 Окт 2023",
+      "client": "Jahongir Saidov",
+      "type": "Агро кредит",
+      "amount": "45,000,000 UZS",
+      "status": "Завершено"
+    },
+    "t2": {
+      "date": "02 Ноя 2023",
+      "client": "Dilshod Karimov",
+      "type": "Бизнес кредит",
+      "amount": "120,000,000 UZS",
+      "status": "В ожидании"
+    },
+    "t3": {
+      "date": "15 Дек 2023",
+      "client": "Malika Tursunova",
+      "type": "Ипотека",
+      "amount": "350,000,000 UZS",
+      "status": "Завершено"
+    },
+    "t4": {
+      "date": "08 Янв 2024",
+      "client": "Azizbek Yuldashev",
+      "type": "Автокредит",
+      "amount": "85,000,000 UZS",
+      "status": "Отклонено"
+    }
+  },
+   "table": {
+    "date": "Дата",
+    "client": "Клиент",
+    "type": "Тип",
+    "amount": "Сумма",
+    "status": "Статус"
+  }
 }

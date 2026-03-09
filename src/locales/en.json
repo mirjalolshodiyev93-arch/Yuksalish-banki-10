@@ -311,7 +311,62 @@
       "message": "Currency rates are updated and always convenient. I always work with this bank.",
       "img": "https://i.pravatar.cc/100?img=44"
     }
-  ]
+  ]  ,
+  "loan":"Loan Growth Trends",
+  "loans":{
+
+    "jan": "Jan",
+    "mar": "Mar",
+    "may": "May",
+    "jul": "Jul",
+    "sep": "Sep",
+    "nov": "Nov"
+  },
+   "stats1": {
+    "clients": "Total Clients",
+    "loans": "Active Loans",
+    "deposits": "Total Deposits",
+    "revenue": "Monthly Revenue"
+  },
+ "transactions": {
+  "title":"Recent Transactions",
+    "t1": {
+      "date": "Oct 24, 2023",
+      "client": "Jahongir Saidov",
+      "type": "Agro Loan",
+      "amount": "45,000,000 UZS",
+      "status": "Completed"
+    },
+    "t2": {
+      "date": "Nov 02, 2023",
+      "client": "Dilshod Karimov",
+      "type": "Business Loan",
+      "amount": "120,000,000 UZS",
+      "status": "Pending"
+    },
+    "t3": {
+      "date": "Dec 15, 2023",
+      "client": "Malika Tursunova",
+      "type": "Mortgage",
+      "amount": "350,000,000 UZS",
+      "status": "Completed"
+    },
+    "t4": {
+      "date": "Jan 08, 2024",
+      "client": "Azizbek Yuldashev",
+      "type": "Car Loan",
+      "amount": "85,000,000 UZS",
+      "status": "Rejected"
+    }
+  },
+   "table": {
+    "date": "Date",
+    "client": "Client",
+    "type": "Type",
+    "amount": "Amount",
+    "status": "Status"
+  }
+  
 
 }
 
